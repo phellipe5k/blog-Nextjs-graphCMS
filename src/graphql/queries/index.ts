@@ -1,6 +1,6 @@
-import * as PAGE_QUERIES from './page';
+import * as PAGE from './page';
 
 
 export {
-    PAGE_QUERIES
+    PAGE
 }

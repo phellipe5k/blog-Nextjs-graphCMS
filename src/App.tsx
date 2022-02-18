@@ -7,8 +7,7 @@ import * as GraphQLQueries from './graphql/queries';
 
 function App() {
   const slug = 'home';
-  // const [data, setData] = useState<any>();
-  const { loading, error, data } = useQuery(GraphQLQueries.PAGE_QUERIES.GET_PAGE_BY_SLUG, {
+  const { loading, error, data } = useQuery(GraphQLQueries.PAGE.GET_BY_SLUG, {
     variables: { slug },
   });
 
