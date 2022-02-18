@@ -1,39 +1,24 @@
-import { useEffect, useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import { useQuery } from 'urql';
+import { useEffect, useState } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import { useQuery } from '@apollo/client';
+import * as GraphQLQueries from './graphql/queries'; 
 
-const HomePageQuery = `
-  query {
-    page (
-      where: { slug: "home" }
-    ) {
-      title
-      subtitle
-      logo {
-        url
-      }
-    }
-  }
-`
+
 function App() {
-  const [count, setCount] = useState(0)
-  const [result, reexecuteQuery] = useQuery({
-    query: HomePageQuery,
+  const slug = 'home';
+  // const [data, setData] = useState<any>();
+  const { loading, error, data } = useQuery(GraphQLQueries.PAGE_QUERIES.GET_PAGE_BY_SLUG, {
+    variables: { slug },
   });
-  const { data, fetching, error } = result;
 
-  useEffect(() => {
-    console.log(data, result)
-  }, [fetching])
-
-  if (fetching) return <p>Loading...</p>;
-
+  if (loading) return <p>Loading...</p>;
+  console.log(data)
   return (
     <div className="App">
       <header className="App-header">
         <img src={data.page.logo.url} className="App-logo" alt="logo" />
-        <p>{ data.page.title }</p>
+        <p>{ data.title }</p>
         <p>
           { data.page.subtitle }
         </p>

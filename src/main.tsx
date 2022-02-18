@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import { Provider } from 'urql';
+import { ApolloProvider } from '@apollo/client';
 import App from './App'
-import client from './lib/urql';
+import client from './lib/apollo';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider value={ client }>
+    <ApolloProvider client={ client }>
       <App />
-    </Provider>
+    </ ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
