@@ -24,9 +24,11 @@ const Hero = ({ title = 'Hero' }: Props) => {
         <S.AboutMe>{profile.aboutMe?.text}</S.AboutMe>
       </S.Info>
       <S.ImageWrapper>
-        <S.ImageCasting>
-          <S.Image src={ profile.profileImageUrl } />
-        </S.ImageCasting>
+        { !!profile.profileImageUrl && (
+          <S.ImageCasting>
+            <S.Image src={ profile.profileImageUrl } />
+          </S.ImageCasting>
+        )}
         <S.IconsRow>
           { !!profile.githubProfileUrl && (
             <Icon
