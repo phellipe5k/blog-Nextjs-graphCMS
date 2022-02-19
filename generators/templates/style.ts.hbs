@@ -1,14 +1,15 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
+import { Theme } from '../../themes/type';
 
-export const Container = styled.main`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const Title = styled.h1`
-  font-size: 4rem;
-  padding: 2% 0;
-`;
+export const Container = styled(motion.section)`
+    ${ ({ theme } ) => {
+        const { colors }: Theme = theme;
+        return css`
+        height: 100vh;
+        width: 100%;
+        background-color: ${ colors.darkBg };
+        
+    ` 
+    }}
+`
