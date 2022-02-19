@@ -1,28 +1,19 @@
-import { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { useQuery } from '@apollo/client';
-import * as GraphQLQueries from './graphql/queries'; 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import GlobalStyle from './globalStyle';
 
 
 function App() {
-  const slug = 'home';
-  const { loading, error, data } = useQuery(GraphQLQueries.PAGE.GET_BY_SLUG, {
-    variables: { slug },
-  });
-
-  if (loading) return <p>Loading...</p>;
-  console.log(data)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={data.page.logo.url} className="App-logo" alt="logo" />
-        <p>{ data.title }</p>
-        <p>
-          { data.page.subtitle }
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projects" element={<Projects />} />
+    </Routes>
+    <GlobalStyle />
+    </BrowserRouter>
   )
 }
 
