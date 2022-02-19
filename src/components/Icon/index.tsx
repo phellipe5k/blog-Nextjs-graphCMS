@@ -1,3 +1,4 @@
+import useMousePosition from '../../hooks/useMousePosition';
 import { useState } from 'react';
 import * as S from './style';
 
@@ -13,6 +14,7 @@ type Props = {
 
 const Icon = ({ type = 'svg', size = 40, color, name = 'Next Js', content, redirectURI }: Props) => {
   const [hovering, setHovering] = useState(false);
+  const { clientX, clientY } = useMousePosition();
   const renderIcon = () => {
     switch(type) {
       case 'svg':
@@ -37,7 +39,7 @@ const Icon = ({ type = 'svg', size = 40, color, name = 'Next Js', content, redir
   return (
     <S.Wrapper>
       {renderIcon()}
-      <S.Tooltip active={hovering}>{name}</S.Tooltip>
+      <S.Tooltip left={clientX + 20} top={clientY - 30} active={hovering}>{name}</S.Tooltip>
     </S.Wrapper>
   )
 }

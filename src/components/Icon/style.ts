@@ -18,26 +18,24 @@ export const Wrapper = styled(motion.div)`
 
 interface Tooltip {
     active?: boolean;
+    left?: number;
+    top?: number;
 }
 
 export const Tooltip = styled(motion.div)<Tooltip>`
-    ${ ({ theme, active }) => {
-        const { colors, transition, layers }: Theme = theme;
+    ${ ({ theme, active, left, top }) => {
+        const { colors }: Theme = theme;
         return css`
-        display: flex;
-        position: absolute;
+        display: ${active ? 'flex' : 'none' };
+        position: ${ active ? 'fixed' : 'absolute' };
         width: 120px;
         border-radius: 4px;
         justify-content: center;
         background-color: red;
-        top: -30px;
-        left: 15px;
-        transition: ${ transition.fast };
-        opacity: ${active ? '.8' : '0'};
+        top: ${ active ? `${top}px` : '-30px' };
+        left: ${ active ? `${left}px` : '15px' };
         background-color: ${ colors.background };
         color: ${ colors.textDark };
-        // z-index: ${active ? layers.base : layers.disappear };
-        cursor: default;
     ` 
     }}
 `
