@@ -8,8 +8,8 @@ export const Container = styled(motion.section)`
         return css`
         height: 100vh;
         width: 100%;
-        background-color: ${ colors.primary };
-
+        background-color: ${ colors.darkBg };
+        
     ` 
     }}
 `
