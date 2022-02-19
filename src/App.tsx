@@ -7,7 +7,7 @@ import themes from './themes';
 import Provider from './Provider/Provider';
 
 function App() {
-  const selected_theme = themes['light'];
+  const selected_theme = themes['main'];
   return (
     <Provider>
     <BrowserRouter>

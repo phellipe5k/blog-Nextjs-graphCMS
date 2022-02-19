@@ -62,7 +62,7 @@ export const Info = styled(motion.div)`
 
 export const ImageWrapper = styled(motion.div)`
     ${ ({ theme } ) => {
-        const { colors, font, spacings }: Theme = theme;
+        const { colors, font, spacings, layers }: Theme = theme;
         return css`
         width: 35%;
         display: flex;
@@ -72,12 +72,35 @@ export const ImageWrapper = styled(motion.div)`
     }}
 `
 
+export const  ImageCasting = styled(motion.div)`
+${ ({ theme } ) => {
+    const { colors, font, spacings, layers }: Theme = theme;
+    return css`
+    width: 75%;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        right: -6%;
+        bottom: -6%;
+        width: 94%;
+        height: 94%;
+        border-radius: 15px;
+        border: 3px solid ${colors.primary};
+        z-index: ${ layers.neutron };
+    }
+    ` 
+}}
+`
+
 export const Image = styled(motion.img)`
     ${ ({ theme } ) => {
-        const { colors, font, spacings }: Theme = theme;
+        const { colors, layers ,font, spacings }: Theme = theme;
         return css`
-            width: 75%;
-            border-radius: 25px;
+            width: 100%;
+            border-radius: 15px;
+            position: relative;
+            z-index: ${ layers.overlay };
         ` 
     }}
 `

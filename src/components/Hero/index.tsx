@@ -22,7 +22,9 @@ const Hero = ({ title = 'Hero' }: Props) => {
         <S.AboutMe>{profile.aboutMe?.text}</S.AboutMe>
       </S.Info>
       <S.ImageWrapper>
-        <S.Image src={ profile.profileImageUrl } />
+        <S.ImageCasting>
+          <S.Image src={ profile.profileImageUrl } />
+        </S.ImageCasting>
       </S.ImageWrapper>
     </S.Container>
   );
