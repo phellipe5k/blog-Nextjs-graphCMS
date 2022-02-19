@@ -68,6 +68,8 @@ export const ImageWrapper = styled(motion.div)`
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100%;
+        flex-direction: column;
         ` 
     }}
 `
@@ -101,6 +103,21 @@ export const Image = styled(motion.img)`
             border-radius: 15px;
             position: relative;
             z-index: ${ layers.overlay };
+        ` 
+    }}
+`
+
+export const IconsRow = styled(motion.div)`
+    ${ ({ theme } ) => {
+        const { colors, font, spacings, layers }: Theme = theme;
+        return css`
+            display: flex;
+            align-self: flex-end;
+            width: 100%;
+            height: 30px;
+            position: relative;
+            top: 40px;
+            justify-content: center;
         ` 
     }}
 `

@@ -1,3 +1,4 @@
+import Icon from '../Icon';
 import { useContext } from 'react';
 import ProfileContext from '../../Provider/Context';
 import { Profile } from '../../types/profile';
@@ -25,6 +26,9 @@ const Hero = ({ title = 'Hero' }: Props) => {
         <S.ImageCasting>
           <S.Image src={ profile.profileImageUrl } />
         </S.ImageCasting>
+        <S.IconsRow>
+          <Icon redirectURI={'https://google.com'} content={profile.technologies[0].iconSvg.icon} />
+        </S.IconsRow>
       </S.ImageWrapper>
     </S.Container>
   );
