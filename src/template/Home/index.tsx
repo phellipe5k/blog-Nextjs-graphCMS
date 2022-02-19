@@ -1,5 +1,6 @@
 import Base from '../Base';
 import * as S from './style';
+import Hero from '../../components/Hero'
 
 type Props = {
   title?: string;
@@ -8,9 +9,7 @@ type Props = {
 const Home = ({ title = 'Home' }: Props) => {
   return (
     <Base>
-      <S.Container>
-        asdasd
-      </S.Container>
+      <Hero />
     </Base>
   )
 }

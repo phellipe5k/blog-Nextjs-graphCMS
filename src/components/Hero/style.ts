@@ -4,12 +4,11 @@ import { Theme } from '../../themes/type';
 
 export const Container = styled(motion.section)`
     ${ ({ theme } ) => {
-        const { colors, spacings }: Theme = theme;
+        const { colors }: Theme = theme;
         return css`
         height: 100%;
         width: 100%;
         background-color: ${ colors.darkBg };
-        padding: ${ spacings.inside.huge };
         
     ` 
     }}
