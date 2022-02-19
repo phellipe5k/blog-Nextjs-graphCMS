@@ -14,7 +14,7 @@ export const Container = styled(motion.section)`
       height: 70px;
       width: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       padding: ${ spacings.inside.huge };
   ` 

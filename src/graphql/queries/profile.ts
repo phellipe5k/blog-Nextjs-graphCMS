@@ -1,8 +1,10 @@
 import { gql } from "@apollo/client";
 
 export const GET_BY_ID = gql`
-    query Profile($id: String) {
-        profile(where: {id: $id}) {
+    query Profile($id: ID) {
+        profile(where: {
+            id: $id
+        }) {
             email
             githubProfileUrl
             instagramUrl
