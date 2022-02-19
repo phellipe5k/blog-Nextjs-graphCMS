@@ -22,7 +22,7 @@ interface Tooltip {
 
 export const Tooltip = styled(motion.div)<Tooltip>`
     ${ ({ theme, active }) => {
-        const { colors, transition }: Theme = theme;
+        const { colors, transition, layers }: Theme = theme;
         return css`
         display: flex;
         position: absolute;
@@ -32,7 +32,12 @@ export const Tooltip = styled(motion.div)<Tooltip>`
         background-color: red;
         top: -30px;
         left: 15px;
-        visibility: none;
+        transition: ${ transition.fast };
+        opacity: ${active ? '.8' : '0'};
+        background-color: ${ colors.background };
+        color: ${ colors.textDark };
+        // z-index: ${active ? layers.base : layers.disappear };
+        cursor: default;
     ` 
     }}
 `

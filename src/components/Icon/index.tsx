@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import * as S from './style';
 
 
@@ -11,12 +12,13 @@ type Props = {
 };
 
 const Icon = ({ type = 'svg', size = 40, color, name = 'Next Js', content, redirectURI }: Props) => {
+  const [hovering, setHovering] = useState(false);
   const renderIcon = () => {
     switch(type) {
       case 'svg':
         return (
           (
-            <S.Container target={"__blank"} href={redirectURI} size={size}>
+            <S.Container onMouseOver={ () => setHovering(true) } onMouseLeave={ () => setHovering(false) } target={"__blank"} href={redirectURI} size={size}>
               <S.SvgWrapper dangerouslySetInnerHTML={{ __html: content }}>
                 
               </S.SvgWrapper>
@@ -25,7 +27,7 @@ const Icon = ({ type = 'svg', size = 40, color, name = 'Next Js', content, redir
         )
       default:
         return (
-          <S.Container target={"__blank"} href={redirectURI}  size={ size }>
+          <S.Container onMouseOver={ () => setHovering(true) } onMouseLeave={ () => setHovering(false) } target={"__blank"} href={redirectURI}  size={ size }>
             <S.Image src={ content } />
           </S.Container>
         );
@@ -35,7 +37,7 @@ const Icon = ({ type = 'svg', size = 40, color, name = 'Next Js', content, redir
   return (
     <S.Wrapper>
       {renderIcon()}
-      <S.Tooltip>{name}</S.Tooltip>
+      <S.Tooltip active={hovering}>{name}</S.Tooltip>
     </S.Wrapper>
   )
 }
