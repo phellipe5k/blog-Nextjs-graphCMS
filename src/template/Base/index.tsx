@@ -1,3 +1,4 @@
+import Header from '../../components/Header';
 import * as S from './style';
 
 interface Base {
@@ -8,6 +9,7 @@ const Base = ({ children }: Base) => {
 
     return (
         <S.Container>
+            <Header />
             { children }
         </S.Container>
     )

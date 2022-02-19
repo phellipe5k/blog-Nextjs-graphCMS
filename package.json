@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "template": "npx plop --plopfile ./generators/plopfile.ts"
+    "template": "npx plop --plopfile ./generators/plopfile.js"
   },
   "dependencies": {
     "@apollo/client": "^3.5.9",

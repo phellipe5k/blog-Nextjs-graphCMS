@@ -1,7 +1,5 @@
-import Plop from 'plop';
 
-module.exports = function (plop: Plop.NodePlopAPI) {
-    // controller generator
+module.exports = function (plop) {
     plop.setGenerator('component', {
       description: 'application controller logic',
       prompts: [
