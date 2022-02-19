@@ -22,7 +22,10 @@ export const Nav = styled(motion.nav)`
       const { colors }: Theme = theme;
       return css`
       height: 70px;
-      width: 100%;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
   ` 
   }}
 `
@@ -37,14 +40,22 @@ export const LogoWrapper = styled(motion.div)`
 `
 
 export const Link = styled(LinkRRD)`
-  ${ ({ theme }) => {
-    const { colors, font }: Theme = theme;
+  ${ ({ theme, selected }: { selected: boolean }) => {
+    const { colors, font, transition }: Theme = theme;
     return css`
       text-decoration: none;
       color: ${colors.textLight};
       font-size: ${ font.sizes.medium };
       font-weight: ${ font.bold };
       padding: 0 16px;
+      transition: ${transition.fast};
+      &:hover{
+        color: ${colors.darkerPrimary};
+      }
+      ${ selected && css`
+        color: ${ colors.primary }
+      ` }
+
     `
   }}
 `
