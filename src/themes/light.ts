@@ -1,7 +1,7 @@
 import { Theme } from './type';
 import { generateMedia } from 'styled-media-query';
 
-const main: Theme =  {
+const light: Theme =  {
     font: {
       family: "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
       light: 300,
@@ -23,16 +23,16 @@ const main: Theme =  {
       rounded: '50%',
     },
     colors: {
-      primary: '#8719DC',
+      primary: '#D02020 ',
       secondary: '#ffffff',
-      textLight: '#c4c4c4',
-      textDark: '#656565', 
-      lightBg: '#292929',
+      textLight: '#656565',
+      textDark: '#c4c4c4', 
+      lightBg: 'rgba(27, 29, 29, 1)',
       subLightBg: '#313131',
-      darkBg: 'rgba(27, 29, 29, 1)',
+      darkBg: 'rgba(244, 249, 249, 1)',
       subDarkBg: '#C4C4C4',
       background: '#ECECEC',
-      darkerPrimary: '#5F357F',
+      darkerPrimary: '#882E2E',
       darkFooter: '#303030',
     },
     borderNoColor: '2px solid',
@@ -81,10 +81,10 @@ const main: Theme =  {
   }
 
   export const mediaQuery = generateMedia({
-    desktop: main.medias.desktop,
-    tablet: main.medias.desktop,
-    mobile: main.medias.mobile,
+    desktop: light.medias.desktop,
+    tablet: light.medias.desktop,
+    mobile: light.medias.mobile,
   })
   
-  export default main;
+  export default light;
   

@@ -9,8 +9,13 @@ export const GET_BY_ID = gql`
             githubProfileUrl
             instagramUrl
             linkedInUrl
+            role
+            profileImageUrl
             name
             phoneNumber
+            aboutMe {
+                text
+            }
             twitterUrl
             projects {
             githubRepository

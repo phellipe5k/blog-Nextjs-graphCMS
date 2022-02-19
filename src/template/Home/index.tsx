@@ -9,7 +9,9 @@ type Props = {
 const Home = ({ title = 'Home' }: Props) => {
   return (
     <Base>
+    <S.Container>
       <Hero />
+    </S.Container>
     </Base>
   )
 }
