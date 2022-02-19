@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Theme } from '../../themes/type';
 
 interface Container {
-    size: number;
+    size?: number;
 }
 
 export const Wrapper = styled(motion.div)`
@@ -12,6 +12,7 @@ export const Wrapper = styled(motion.div)`
         return css`
         display: flex;
         position: relative;
+        margin: 0 2%;
     ` 
     }}
 `
@@ -24,7 +25,7 @@ interface Tooltip {
 
 export const Tooltip = styled(motion.div)<Tooltip>`
     ${ ({ theme, active, left, top }) => {
-        const { colors }: Theme = theme;
+        const { colors, layers }: Theme = theme;
         return css`
         display: ${active ? 'flex' : 'none' };
         position: ${ active ? 'fixed' : 'absolute' };
@@ -36,6 +37,7 @@ export const Tooltip = styled(motion.div)<Tooltip>`
         left: ${ active ? `${left}px` : '15px' };
         background-color: ${ colors.background };
         color: ${ colors.textDark };
+        z-index: ${ layers.overlay };
     ` 
     }}
 `
@@ -47,9 +49,14 @@ export const Container = styled(motion.a)<Container>`
         width: ${size}px;
         height: ${size}px;
         border-radius: 8px;
-        margin: 0 4%;
+        margin: 0 2%;
         cursor: pointer;
         transition: ${transition.fast};
+        background-color: ${colors.subLightBg};
+        &:hover {
+            transform: scale(1.2);
+            background-color: transparent;
+        }
 
         
     ` 

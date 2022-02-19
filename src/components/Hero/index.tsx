@@ -4,6 +4,7 @@ import ProfileContext from '../../Provider/Context';
 import { Profile } from '../../types/profile';
 import { getSimpleName } from '../../util';
 import * as S from './style';
+import { Icons as I } from '../@shared';
 
 type Props = {
   title?: string;
@@ -27,7 +28,51 @@ const Hero = ({ title = 'Hero' }: Props) => {
           <S.Image src={ profile.profileImageUrl } />
         </S.ImageCasting>
         <S.IconsRow>
-          <Icon redirectURI={'https://google.com'} content={profile.technologies[0].iconSvg.icon} />
+          { !!profile.githubProfileUrl && (
+            <Icon
+              size={40}
+              type="icon"
+              tooltip
+              name="Github"
+              redirectURI={profile.githubProfileUrl}
+              content={<I.GithubIcon />}
+            />
+          ) }
+          
+          { !!profile.linkedInUrl && (
+            <Icon
+              size={40}
+              type="icon"
+              tooltip
+              name="LinkedIn"
+              redirectURI={profile.linkedInUrl}
+              content={<I.LinkedinIcon />}
+            />
+          ) }
+          
+          { !!profile.instagramUrl && (
+            <Icon
+              size={40}
+              type="icon"
+              tooltip
+              name="Insagram"
+              redirectURI={profile.instagramUrl}
+              content={<I.InstagramIcon />}
+            />
+          ) }
+
+          
+          { !!profile.twitterUrl && (
+            <Icon
+              size={40}
+              type="icon"
+              tooltip
+              name="Twitter"
+              redirectURI={profile.twitterUrl}
+              content={<I.TwitterIcon />}
+            />
+          ) }
+          
         </S.IconsRow>
       </S.ImageWrapper>
     </S.Container>
