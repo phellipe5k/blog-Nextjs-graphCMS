@@ -9,6 +9,7 @@ export const Container = styled(motion.section)`
         height: 100vh;
         width: 100%;
         background-color: ${ colors.darkBg };
+        padding: ${ spacings.inside.huge };
         
     ` 
     }}
