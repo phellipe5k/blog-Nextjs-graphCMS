@@ -3,6 +3,10 @@ import { motion } from 'framer-motion';
 import { Theme } from '../../themes/type';
 import { Link as LinkRRD } from 'react-router-dom';
 
+interface LinkProps {
+  selected?: boolean;
+}
+
 export const Container = styled(motion.section)`
   ${ ({ theme } ) => {
       const { colors, spacings }: Theme = theme;
@@ -39,21 +43,37 @@ export const LogoWrapper = styled(motion.div)`
   }}
 `
 
-export const Link = styled(LinkRRD)`
-  ${ ({ theme, selected }: { selected: boolean }) => {
-    const { colors, font, transition }: Theme = theme;
+export const Link = styled(LinkRRD)<LinkProps>`
+  ${ ({ theme, selected }) => {
+    const { colors, font, transition, spacings }: Theme = theme;
     return css`
       text-decoration: none;
       color: ${colors.textLight};
       font-size: ${ font.sizes.medium };
       font-weight: ${ font.bold };
       padding: 0 16px;
+      position: relative;
       transition: ${transition.fast};
-      &:hover{
-        color: ${colors.darkerPrimary};
-      }
-      ${ selected && css`
+      &:before {
+          content: '';
+          position: absolute;
+          width: 0;
+          transition: ${ transition.fast };
+          height: 3px;
+          left: calc(0 + ${ spacings.inside.medium });
+          bottom: -3px;
+          background-color: ${ colors.primary };
+          border-radius: 5px;
+        }
+      ${ selected ? css`
         color: ${ colors.primary }
+      ` : css`
+        &:hover{
+          color: ${colors.primary};
+          &:before {
+            width: 50px;
+          }
+        }
       ` }
 
     `
