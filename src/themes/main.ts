@@ -23,7 +23,7 @@ const main: Theme =  {
       rounded: '50%',
     },
     colors: {
-      primary: '#2cab4e',
+      primary: '#e34a17',
       secondary: '#ffffff',
       textLight: '#c4c4c4',
       textDark: '#656565', 
@@ -32,7 +32,7 @@ const main: Theme =  {
       darkBg: 'rgba(16, 20, 17, 1)',
       subDarkBg: '#C4C4C4',
       background: '#ECECEC',
-      darkerPrimary: '#296e3b',
+      darkerPrimary: '#994a2f',
       darkFooter: '#303030',
     },
     borderNoColor: '2px solid',
