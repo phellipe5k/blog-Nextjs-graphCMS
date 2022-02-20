@@ -23,7 +23,7 @@ const light: Theme =  {
       rounded: '50%',
     },
     colors: {
-      primary: '#D02020 ',
+      primary: '#D02020',
       secondary: '#ffffff',
       textLight: '#656565',
       textDark: '#656565', 

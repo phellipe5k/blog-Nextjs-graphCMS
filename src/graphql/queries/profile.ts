@@ -25,14 +25,14 @@ export const GET_BY_ID = gql`
             }
             technologies {
                 name
-                iconSvg
-                documentationUrl
+                slug
+                knowledge
             }
             }
             technologies {
-            name
-            iconSvg
-            documentationUrl
+                name
+                slug
+                knowledge
             }
         }
     }
@@ -57,14 +57,14 @@ export const GET_ALL = gql`
             }
             technologies {
                 name
-                iconSvg
-                documentationUrl
+                slug
+                knowledge
             }
             }
             technologies {
             name
-            iconSvg
-            documentationUrl
+            slug
+
             }
         }
     }
@@ -82,8 +82,8 @@ export const GET_SHORT_INFO_BY_ID = gql`
             twitterUrl
             technologies {
             name
-            iconSvg
-            documentationUrl
+            slug
+            knowledge
             }
         }
     }
@@ -101,8 +101,8 @@ export const GET_PROFILE_PROJECTS_BY_ID = gql`
             }
             technologies {
                 name
-                iconSvg
-                documentationUrl
+                slug
+                knowledge
             }
             }
         }

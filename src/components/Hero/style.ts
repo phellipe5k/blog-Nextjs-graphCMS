@@ -6,7 +6,7 @@ export const Container = styled(motion.section)`
     ${ ({ theme } ) => {
         const { colors, spacings }: Theme = theme;
         return css`
-        height: 400px;
+        height: 550px;
         width: 100%;
         display: flex;
     ` 
@@ -66,7 +66,7 @@ export const ImageWrapper = styled(motion.div)`
         return css`
         width: 35%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         height: 100%;
         flex-direction: column;
