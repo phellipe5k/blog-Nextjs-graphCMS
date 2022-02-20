@@ -9,6 +9,8 @@ export const Container = styled(motion.a)`
         width: 33.33%;
         display: flex;
         text-decoration: none;
+        
+        justify-content: center;
         margin-bottom: ${ spacings.outside.huge };
         cursor: pointer;
         transition: ${transition.fast};
@@ -27,7 +29,8 @@ export const Title = styled(motion.h3)`
     ${ ({ theme } ) => {
         const { colors, font }: Theme = theme;
         return css`
-            font-size: ${ font.sizes.medium };
+        width: 50%;
+            font-size: calc(${ font.sizes.small } + 2px);
             color: ${ colors.textLight };
             font-weight: ${ font.light };
     ` 
@@ -37,7 +40,7 @@ export const Info = styled(motion.section)`
     ${ ({ theme } ) => {
         const { colors }: Theme = theme;
         return css`
-        width: 100%; 
+        width: 50%
     ` 
     }}
 `

@@ -14,14 +14,19 @@ const Technology = ({ data }: Props) => {
   const [active, setActive] = useState<boolean>(false);
 
   return (
-    <S.Container target={'_blank'} href={documentationUrl} onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)}>
+    <S.Container
+      target={'_blank'}
+      href={documentationUrl}
+      onMouseEnter={() => setActive(true)}
+      onMouseLeave={() => setActive(false)}
+    >
       <Icon
         active={ active }
         redirectURI={documentationUrl}
         type='icon'
         content={TechIcon}
         name={TechIcon}
-        size={55}
+        size={50}
       />
       <S.Info>
         <S.Title>{data?.name}</S.Title>

@@ -22,8 +22,8 @@ export const Square = styled(motion.section)<Square>`
         const { colors, spacings }: Theme = theme;
         return css`
             width: 100%;
-            width: 20px;
-            height: 10px;
+            width: 18px;
+            height: 8px;
             border: 1px solid ${colors.textLight};
             margin-right: calc(${ spacings.outside.xxsmall } - 2px);
             border-radius: 2px;
