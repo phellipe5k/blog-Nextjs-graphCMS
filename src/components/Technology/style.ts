@@ -8,7 +8,7 @@ export const Container = styled(motion.section)`
         return css`
         width: 33.33%;
         display: flex;
-        margin: ${ spacings.outside.small };
+        margin-bottom: ${ spacings.outside.huge };
         cursor: pointer;
     ` 
     }}
