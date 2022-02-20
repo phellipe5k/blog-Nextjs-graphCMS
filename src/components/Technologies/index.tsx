@@ -17,6 +17,7 @@ const Technologies = ({ title = 'Technologies' }: Props) => {
       setTechnologies(profile.technologies);
     }
   }, [profile]);
+
   return (
     <S.Container>
       <S.Title>Knowledge</S.Title>

@@ -6,7 +6,7 @@ export const Container = styled(motion.section)`
     ${ ({ theme } ) => {
         const { colors, spacings }: Theme = theme;
         return css`
-        width: 100%;
+        width: 33.33%;
         display: flex;
         margin: ${ spacings.outside.small };
         cursor: pointer;

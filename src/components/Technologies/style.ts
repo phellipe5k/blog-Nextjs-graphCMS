@@ -7,7 +7,6 @@ export const Container = styled(motion.section)`
         const { colors }: Theme = theme;
         return css`
             width: 100%;
-            
     ` 
     }}
 `
