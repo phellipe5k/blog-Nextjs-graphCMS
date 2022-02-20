@@ -5,7 +5,7 @@ import TechnologiesInfo from '../@shared/technologies';
 import Knowledge from '../Knowledge';
 
 type Props = {
-  data?: TechnologyTypes;
+  data: TechnologyTypes;
 };
 
 const Technology = ({ data }: Props) => {
@@ -22,7 +22,7 @@ const Technology = ({ data }: Props) => {
       />
       <S.Info>
         <S.Title>{data?.name}</S.Title>
-        <Knowledge rate={ data?.knowledge } />
+        <Knowledge rate={ data.knowledge } />
       </S.Info>
     </S.Container>
   );

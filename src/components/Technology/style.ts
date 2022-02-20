@@ -9,6 +9,7 @@ export const Container = styled(motion.section)`
         width: 100%;
         display: flex;
         margin: ${ spacings.outside.small };
+        cursor: pointer;
     ` 
     }}
 `
