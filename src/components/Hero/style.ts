@@ -21,6 +21,15 @@ export const Name = styled(motion.h1)`
         color: ${colors.primary};
         width: 30%;
         line-height: 120px;
+        text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 11px #fff,
+            0 0 12px ${colors.primary},
+            0 0 12px ${colors.primary},
+            0 0 12px ${colors.primary},
+            0 0 62px ${colors.primary},
+            0 0 11px ${colors.primary};
         
         ` 
     }}
