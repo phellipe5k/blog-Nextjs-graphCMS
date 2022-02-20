@@ -66,7 +66,7 @@ export const Link = styled(LinkRRD)<LinkProps>`
           border-radius: 5px;
         }
       ${ selected ? css`
-        color: ${ colors.primary }
+        color: ${ colors.primary };
       ` : css`
         &:hover{
           color: ${colors.primary};

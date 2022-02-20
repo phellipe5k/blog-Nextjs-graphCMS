@@ -107,7 +107,6 @@ ${ ({ theme } ) => {
         width: 94%;
         height: 94%;
         border-radius: 15px;
-        border: 3px solid ${colors.primary};
         z-index: ${ layers.neutron };
         
         box-shadow:
