@@ -11,9 +11,10 @@ type Props = {
   redirectURI?: any;
   name?: string;
   tooltip?: boolean;
+  active?: boolean;
 };
 
-const Icon = ({ type = 'svg', tooltip, size, color, name, content, redirectURI }: Props) => {
+const Icon = ({ type = 'svg', tooltip, active, size, color, name, content, redirectURI }: Props) => {
   const [hovering, setHovering] = useState(false);
   const { clientX, clientY } = useMousePosition();
   const renderIcon = () => {
@@ -21,7 +22,7 @@ const Icon = ({ type = 'svg', tooltip, size, color, name, content, redirectURI }
       case 'svg':
         return (
           (
-            <S.Container onMouseOver={ () => setHovering(true) } onMouseLeave={ () => setHovering(false) } target={"__blank"} href={redirectURI} size={size}>
+            <S.Container onMouseEnter={ () => setHovering(true) } onMouseLeave={ () => setHovering(false) } target={"__blank"} href={redirectURI} size={size}>
               <S.SvgWrapper dangerouslySetInnerHTML={{ __html: content }}>
                 
               </S.SvgWrapper>
@@ -48,7 +49,7 @@ const Icon = ({ type = 'svg', tooltip, size, color, name, content, redirectURI }
   }
 
   return (
-    <S.Wrapper>
+    <S.Wrapper active={ active }>
       {renderIcon()}
       { !!tooltip && <S.Tooltip left={clientX + 20} top={clientY - 30} active={hovering}>{name}</S.Tooltip> }
     </S.Wrapper>

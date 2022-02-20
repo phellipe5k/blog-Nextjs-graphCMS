@@ -6,13 +6,33 @@ interface Container {
     size?: number;
 }
 
-export const Wrapper = styled(motion.div)`
-    ${ ({ theme } ) => {
+interface Wrapper {
+    active?: boolean;
+}
+
+export const Wrapper = styled(motion.div)<Wrapper>`
+    ${ ({ theme, active } ) => {
         const { colors, transition }: Theme = theme;
         return css`
         display: flex;
         position: relative;
         margin: 0 2%;
+        a {
+            
+            background-color: transparent;
+        }
+        ${ !!active && css`
+            > a {
+                div {
+                    svg {
+                        fill: ${ colors.primary };
+                        path {
+                            fill: ${ colors.primary };
+                        }
+                    }
+                }
+            }
+        ` }
     ` 
     }}
 `

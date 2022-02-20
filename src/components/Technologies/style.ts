@@ -20,7 +20,7 @@ export const Title = styled(motion.h3)`
             font-size: ${ font.sizes.large };
             font-weight: ${ font.bold };
             color: ${ colors.subDarkBg };
-            margin-bottom: ${ spacings.outside.medium };
+            margin-bottom: ${ spacings.outside.huge };
     ` 
     }}
 `

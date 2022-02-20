@@ -3,6 +3,7 @@ import * as S from './style';
 import Icon from '../Icon';
 import TechnologiesInfo from '../@shared/technologies';
 import Knowledge from '../Knowledge';
+import { useState } from 'react';
 
 type Props = {
   data: TechnologyTypes;
@@ -10,10 +11,12 @@ type Props = {
 
 const Technology = ({ data }: Props) => {
   const { Icon: TechIcon, documentationUrl } = TechnologiesInfo[data?.slug];
+  const [active, setActive] = useState<boolean>(false);
 
   return (
-    <S.Container>
+    <S.Container target={'_blank'} href={documentationUrl} onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)}>
       <Icon
+        active={ active }
         redirectURI={documentationUrl}
         type='icon'
         content={TechIcon}
