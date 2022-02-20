@@ -4,12 +4,18 @@ import {
     Instagram as InstagramIcon,
     Linkedin as LinkedinIcon
 } from '@styled-icons/boxicons-logos';
+import {
+    Nextdotjs as NextjsIcon,
+    Graphql as GraphQLIcon,
+} from '@styled-icons/simple-icons';
 
 const Icons = {
     GithubIcon,
     TwitterIcon,
     InstagramIcon,
-    LinkedinIcon
+    LinkedinIcon,
+    NextjsIcon,
+    GraphQLIcon
 
 }
 

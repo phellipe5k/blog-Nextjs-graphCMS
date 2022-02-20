@@ -1,6 +1,7 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import ProfileContext from '../../Provider/Context';
-import { Technology } from '../../types/profile';
+import { Technology as TechnologyTypes } from '../../types/profile';
+import Technology from '../Technology';
 import * as S from './style';
 
 type Props = {
@@ -8,12 +9,20 @@ type Props = {
 };
 
 const Technologies = ({ title = 'Technologies' }: Props) => {
-  const [technologies, setTechnologies] = useState<Technology[]>([]);
+  const [technologies, setTechnologies] = useState<TechnologyTypes[]>([]);
   const [{ profile }, loading] = useContext(ProfileContext);
-  console.log(profile, 'asdasd') 
+
+  useEffect(() => {
+    if (profile) {
+      setTechnologies(profile.technologies);
+    }
+  }, [profile]);
   return (
     <S.Container>
-      technologies
+      <S.Title>Knowledge</S.Title>
+      <S.TechnologiesWrapper>
+        { !!technologies && technologies.map(tech => <Technology key={tech.slug} data={ tech } />) }
+      </S.TechnologiesWrapper>
     </S.Container>
   );
 }

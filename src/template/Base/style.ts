@@ -6,7 +6,7 @@ export const Container = styled(motion.section)`
     ${ ({ theme } ) => {
         const { colors, spacings }: Theme = theme;
         return css`
-        height: 100vh;
+        height: 100%;
         width: 100%;
         background-color: ${ colors.darkBg };
         

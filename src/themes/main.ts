@@ -29,7 +29,7 @@ const main: Theme =  {
       textDark: '#656565', 
       lightBg: '#292929',
       subLightBg: '#313131',
-      darkBg: 'rgba(27, 29, 29, 1)',
+      darkBg: 'rgba(16, 20, 17, 1)',
       subDarkBg: '#C4C4C4',
       background: '#ECECEC',
       darkerPrimary: '#296e3b',

@@ -4,12 +4,30 @@ import { Theme } from '../../themes/type';
 
 export const Container = styled(motion.section)`
     ${ ({ theme } ) => {
+        const { colors, spacings }: Theme = theme;
+        return css`
+        width: 100%;
+        display: flex;
+        margin: ${ spacings.outside.small };
+    ` 
+    }}
+`
+
+export const Title = styled(motion.h3)`
+    ${ ({ theme } ) => {
+        const { colors, font }: Theme = theme;
+        return css`
+            font-size: ${ font.sizes.medium };
+            color: ${ colors.textLight };
+            font-weight: ${ font.normal };
+    ` 
+    }}
+`
+export const Info = styled(motion.section)`
+    ${ ({ theme } ) => {
         const { colors }: Theme = theme;
         return css`
-        height: 100vh;
-        width: 100%;
-        background-color: ${ colors.darkBg };
-        
+        width: 100%; 
     ` 
     }}
 `
