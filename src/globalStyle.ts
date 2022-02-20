@@ -12,7 +12,11 @@ const GlobalStyle = createGlobalStyle`
         font-family: ${font.family};
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        }    
+        }
+        body {
+        height: 100%;
+        cursor: default;
+        }
     ` }
     }
 

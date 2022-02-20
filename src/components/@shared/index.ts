@@ -4,6 +4,7 @@ import {
     Instagram as InstagramIcon,
     Linkedin as LinkedinIcon
 } from '@styled-icons/boxicons-logos';
+import { Share as ShareIcon } from '@styled-icons/fluentui-system-filled';
 import {
     Nextdotjs as NextjsIcon,
     Graphql as GraphQLIcon,
@@ -106,7 +107,8 @@ const Icons = {
     TypescriptIcon,
     VercelIcon,
     VitejsIcon,
-    VuejsIcon
+    VuejsIcon,
+    ShareIcon
 }
 
 export {

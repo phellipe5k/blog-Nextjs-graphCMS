@@ -5,6 +5,8 @@ export interface Technology {
 }
 
 export interface Project {
+    title: string;
+    website: string;
     githubRepository: string;
     description: string;
     image: {

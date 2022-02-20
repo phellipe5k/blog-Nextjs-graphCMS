@@ -1,9 +1,9 @@
-import Base from "../template/Base";
+import ProjectsTemplate from "../template/Projects";
 
 const Projects = () => {
 
     return (
-        <Base>asd</Base>
+        <ProjectsTemplate />
     )
 
 }

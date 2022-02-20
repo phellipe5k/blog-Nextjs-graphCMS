@@ -18,6 +18,8 @@ export const GET_BY_ID = gql`
             }
             twitterUrl
             projects {
+            title
+            website
             githubRepository
             description
             image {
@@ -50,6 +52,8 @@ export const GET_ALL = gql`
             phoneNumber
             twitterUrl
             projects {
+            title
+            website
             githubRepository
             description
             image {
