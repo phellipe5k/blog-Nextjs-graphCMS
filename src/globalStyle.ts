@@ -3,6 +3,7 @@ import { Theme } from './themes/type';
  
 const GlobalStyle = createGlobalStyle`
     ${ ({ theme }) => {
+        // @ts-ignore
         const { font }: Theme = theme;
         return css`
         * {

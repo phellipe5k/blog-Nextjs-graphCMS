@@ -10,6 +10,7 @@ type Props = {
 };
 
 const Technology = ({ data }: Props) => {
+  // @ts-ignore
   const { Icon: TechIcon, documentationUrl } = TechnologiesInfo[data?.slug];
   const [active, setActive] = useState<boolean>(false);
 

@@ -13,7 +13,9 @@ const Project = ({ data }: Props) => {
   return (
     <S.Container>
       <S.MainImageWrapper>  
-        <S.MainImage src={ data.image[2].url } />
+        <S.MainImage 
+        //@ts-ignore
+        src={ data.image[2].url } />
       </S.MainImageWrapper>
       <S.RightContent>
         <S.Share>
@@ -30,6 +32,7 @@ const Project = ({ data }: Props) => {
             !!data.technologies.length &&
             data.technologies.map(tech => {
               console.log(tech.slug)
+              // @ts-ignore
               const { Icon: IconO, documentationUrl } = TechnologiesInfo[tech.slug];
               return <Icon redirectURI={documentationUrl} tooltip name={tech.name} type="icon" size={30} content={IconO}/>
                })
