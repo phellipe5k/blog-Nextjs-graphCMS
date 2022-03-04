@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { Theme } from '../../themes/type';
-import { Link as LinkRRD } from 'react-router-dom';
+import { default as LinkRRD } from 'next/link';
 
 export const Container = styled(motion.section)`
     ${ ({ theme } ) => {

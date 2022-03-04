@@ -23,7 +23,7 @@ const Provider =  ({ children }: Provider) => {
   }, [loading])
 
   return (
-    <ProfileContext.Provider value={ [{ profile, setProfile }, loading, error] }>
+    <ProfileContext.Provider value={ [{ profile, setProfile }] }>
       { children }
     </ProfileContext.Provider>
     

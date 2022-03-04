@@ -1,21 +1,23 @@
 import * as S from './style';
+import {useRouter } from 'next/router';
 import Logo from '../../assets/logo_dark_theme.png'
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
 
 type Props = {
   title?: string;
 };
 
 const Header = ({ title = 'Header' }: Props) => {
-  const { pathname: page } = useLocation();
+  const router = useRouter();
+  const page = router.pathname;
   return (
     <S.Container>
       <S.LogoWrapper>
         <S.Logo src={ Logo } />
       </S.LogoWrapper>
       <S.Nav>
-        <S.Link selected={page == '/'} to="/">Home</S.Link>
-        <S.Link selected={page == '/projects'} to="/projects">Projects</S.Link>
+        <Link href="/"><S.Link selected={page == '/'}>Home</S.Link></Link>
+        <Link href="/projects"><S.Link selected={page == '/projects'}>Projects</S.Link></Link>
       </S.Nav>
     </S.Container>
   );

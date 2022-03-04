@@ -3,7 +3,7 @@ import ProfileContext from '../../Provider/Context';
 import * as S from './style';
 import Project from '../Project';
 import { Project as ProjectTypes } from '../../types/profile';
-import { useLocation } from 'react-router';
+import {useRouter } from 'next/router';
 
 type Props = {
   title?: string;
@@ -12,7 +12,7 @@ type Props = {
 const Projects = ({ title = 'Project' }: Props) => {
   const [projects, setProjects] = useState<ProjectTypes[]>([]);
   const [{ profile }, loading] = useContext(ProfileContext);
-  const { pathname } = useLocation();
+  const { pathname } = useRouter();
 
   useEffect(() => {
     if (profile) {  
@@ -24,7 +24,7 @@ const Projects = ({ title = 'Project' }: Props) => {
       { pathname == '/' && <S.Title>Projects</S.Title> }
       <S.ProjectsWrapper>
         { !!projects.length && projects.map((project, index) => index <= 1 ? <Project key={index} data={ project } /> : null) }
-        { (projects.length >= 2 && pathname == '/') && <S.Link to="/projects"><S.Link to="/projects">See more Projects</S.Link></S.Link>}
+        { (projects.length >= 2 && pathname == '/') && <S.Link href="/projects"><S.Link href="/projects">See more Projects</S.Link></S.Link>}
       </S.ProjectsWrapper>
     </S.Container>
   );

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { Theme } from '../../themes/type';
-import { Link as LinkRRD } from 'react-router-dom';
+import { default as LinkRRD } from 'next/link';
 
 interface LinkProps {
   selected?: boolean;
@@ -43,7 +43,7 @@ export const LogoWrapper = styled(motion.div)`
   }}
 `
 
-export const Link = styled(LinkRRD)<LinkProps>`
+export const Link = styled.a<LinkProps>`
   ${ ({ theme, selected }) => {
     const { colors, font, transition, spacings }: Theme = theme;
     return css`
