@@ -6,7 +6,7 @@ type Props = {
 
 const GenerateModal = ({ title = 'GenerateModal' }: Props) => (
   <S.Container>
-    <S.Title>{title}</S.Title>
+    { title }
   </S.Container>
 );
 

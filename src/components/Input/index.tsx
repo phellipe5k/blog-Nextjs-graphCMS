@@ -6,7 +6,7 @@ type Props = {
 
 const Input = ({ title = 'Input' }: Props) => (
   <S.Container>
-    <S.Title>{title}</S.Title>
+    { title }
   </S.Container>
 );
 

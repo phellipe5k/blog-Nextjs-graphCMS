@@ -6,7 +6,7 @@ type Props = {
 
 const Button = ({ title = 'Button' }: Props) => (
   <S.Container>
-    <S.Title>{title}</S.Title>
+    { title }
   </S.Container>
 );
 
