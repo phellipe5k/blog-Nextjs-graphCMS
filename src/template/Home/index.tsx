@@ -18,7 +18,7 @@ const Home = ({ title = 'Home' }: Props) => {
         <S.Subtitle>Create a detailed portfolio less than 5 minutes. Show your projects, knowledge technologies and more.</S.Subtitle>  
         <S.WrapperButtons>
           {/*@ts-ignore */}
-          <Button.Transparent width='200px' style={{ borderRadius: '10px', margin: '0 1%' }}>Try it</Button.Transparent>
+          <Button.Transparent width='200px' style={{ borderRadius: '10px', margin: '0 1%' }}><I.GithubIcon width={25} color="white" /> Try it with github</Button.Transparent>
         </S.WrapperButtons>
         </S.Main>
       <S.Image src={'assets/developerporfolio.png'} />

@@ -25,7 +25,7 @@ const Provider =  ({ children }: Provider) => {
   useEffect(() => {
     if (!loading) {
       console.log(data,'auhsdhausda')
-      setProfile(data.profile);
+      setProfile(data?.profile);
     }
   }, [loading])
 

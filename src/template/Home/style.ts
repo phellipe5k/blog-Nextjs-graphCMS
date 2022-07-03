@@ -29,7 +29,8 @@ export const Main = styled.main`
 
 export const Title = styled.h1`
   color: #bfbfbf;
-  font-size: 120px;
+  text-align: center;
+  font-size: 100px;
   font-family: Lexend, sans-serif !important;
 text-shadow:
     0 0 50px ${'#5d28a1'};
@@ -37,6 +38,9 @@ text-shadow:
 
 export const Subtitle = styled.h3`
   color: #ababab;
+  font-size: 16px;
+  text-align: center;
+  font-weight: lighter;
   margin: 0.5% 0 3% 0;
 
   font-family: Lexend, sans-serif !important;
