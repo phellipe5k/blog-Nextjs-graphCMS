@@ -1,4 +1,4 @@
-import ProjectsTemplate from "../template/Projects";
+import ProjectsTemplate from "../../template/Projects";
 
 const Projects = () => {
 

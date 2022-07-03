@@ -10,20 +10,27 @@ interface Provider {
 
 const Provider =  ({ children }: Provider) => {
   const [profile, setProfile] = useState<Profile>();
-  
-  const id = "ckzt9vr9k1kyo0c22tmc4tlkb";
-  const { loading, error, data } = useQuery(GraphQLQueries.PROFILE.GET_BY_ID, {
-    variables: { id },
+  const [slug, setSlug] = useState('');
+  const { loading, error, data, refetch } = useQuery(GraphQLQueries.PROFILE.GET_BY_SLUG, {
+    variables: { slug },
   });
 
   useEffect(() => {
+    if (!loading && slug) {
+      console.log('REFETCHING!!')
+      refetch({ slug })
+    }
+  }, [loading, slug])
+
+  useEffect(() => {
     if (!loading) {
-      setProfile(data.profile)
+      console.log(data,'auhsdhausda')
+      setProfile(data.profile);
     }
   }, [loading])
 
   return (
-    <ProfileContext.Provider value={ [{ profile, setProfile }] }>
+    <ProfileContext.Provider value={[{profile, setProfile, setSlug}, loading] }>
       { children }
     </ProfileContext.Provider>
     

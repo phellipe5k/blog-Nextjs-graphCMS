@@ -15,6 +15,10 @@ const myApp = ({ Component, pageProps }: AppProps) => {
         <>
         <Head>
           <title>Portfolio - GraphQL - GraphCMS - Next.Js</title>
+
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap" rel="stylesheet"></link>
         </Head>
           <ThemeProvider theme={ selected_theme }>
             <Component {...pageProps} />

@@ -1,9 +1,9 @@
 import { gql } from "@apollo/client";
 
-export const GET_BY_ID = gql`
-    query Profile($id: ID) {
+export const GET_BY_SLUG = gql`
+    query Profile($slug: String) {
         profile(where: {
-            id: $id
+            slug: $slug
         }) {
             email
             githubProfileUrl

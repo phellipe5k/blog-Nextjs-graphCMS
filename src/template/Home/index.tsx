@@ -3,6 +3,8 @@ import * as S from './style';
 import Hero from '../../components/Hero'
 import Technologies from '../../components/Technologies';
 import Projects from '../../components/Projects';
+import { Button } from 'web3-components'
+import { Icons as I } from '../../components/@shared';
 
 type Props = {
   title?: string;
@@ -10,13 +12,17 @@ type Props = {
 
 const Home = ({ title = 'Home' }: Props) => {
   return (
-    <Base>
     <S.Container>
-      <Hero />
-      <Technologies />
-      <Projects />
+      <S.Main>
+        <S.Title>Developers Portfolio</S.Title>
+        <S.Subtitle>Create a detailed portfolio less than 5 minutes. Show your projects, knowledge technologies and more.</S.Subtitle>  
+        <S.WrapperButtons>
+          {/*@ts-ignore */}
+          <Button.Transparent width='200px' style={{ borderRadius: '10px', margin: '0 1%' }}>Try it</Button.Transparent>
+        </S.WrapperButtons>
+        </S.Main>
+      <S.Image src={'assets/developerporfolio.png'} />
     </S.Container>
-    </Base>
   )
 }
 

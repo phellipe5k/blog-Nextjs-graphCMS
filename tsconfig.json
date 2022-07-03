@@ -7,10 +7,12 @@
       "DOM.Iterable",
       "ESNext"
     ],
+    "jsx": "preserve",
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
@@ -18,16 +20,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
     "incremental": true
   },
   "include": [
     "src"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
   ],
   "exclude": [
     "node_modules"
