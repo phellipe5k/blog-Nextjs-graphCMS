@@ -4,7 +4,10 @@ import {
     Instagram as InstagramIcon,
     Linkedin as LinkedinIcon
 } from '@styled-icons/boxicons-logos';
+import { Stack as StackIcon } from '@styled-icons/bootstrap';
+import { NotificationsNone as NotificationIcon } from '@styled-icons/material';
 import { Share as ShareIcon } from '@styled-icons/fluentui-system-filled';
+import { Information as InformationIcon } from '@styled-icons/ionicons-outline';
 import {
     Nextdotjs as NextjsIcon,
     Graphql as GraphQLIcon,
@@ -108,7 +111,10 @@ const Icons = {
     VercelIcon,
     VitejsIcon,
     VuejsIcon,
-    ShareIcon
+    ShareIcon,
+    StackIcon,
+    NotificationIcon,
+    InformationIcon
 }
 
 export {

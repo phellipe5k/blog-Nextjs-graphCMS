@@ -5,6 +5,7 @@ import Technologies from '../../components/Technologies';
 import Projects from '../../components/Projects';
 import { Button } from 'web3-components'
 import { Icons as I } from '../../components/@shared';
+import GeneralModal from '../../components/GenerateModal';
 
 type Props = {
   title?: string;
@@ -22,6 +23,7 @@ const Home = ({ title = 'Home' }: Props) => {
         </S.WrapperButtons>
         </S.Main>
       <S.Image src={'assets/developerporfolio.png'} />
+      <GeneralModal />
     </S.Container>
   )
 }
