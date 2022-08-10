@@ -33,6 +33,9 @@ const GenerateModal = ({ title = 'GenerateModal' }: Props) => (
     <Section Icon={ <I.StackIcon size={20} color="black" /> } title="Your skills">
       asd
     </Section>
+    <Section Icon={ <I.BuildIcon size={20} color="black" /> } title="Projects">
+      asd
+    </Section>
   </S.Container>
 );
 

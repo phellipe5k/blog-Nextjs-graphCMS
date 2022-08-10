@@ -5,7 +5,7 @@ import {
     Linkedin as LinkedinIcon
 } from '@styled-icons/boxicons-logos';
 import { Stack as StackIcon } from '@styled-icons/bootstrap';
-import { NotificationsNone as NotificationIcon } from '@styled-icons/material';
+import { NotificationsNone as NotificationIcon, Build as BuildIcon} from '@styled-icons/material';
 import { Share as ShareIcon } from '@styled-icons/fluentui-system-filled';
 import { Information as InformationIcon } from '@styled-icons/ionicons-outline';
 import {
@@ -114,7 +114,8 @@ const Icons = {
     ShareIcon,
     StackIcon,
     NotificationIcon,
-    InformationIcon
+    InformationIcon,
+    BuildIcon
 }
 
 export {
